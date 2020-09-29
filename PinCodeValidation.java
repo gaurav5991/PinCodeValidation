@@ -10,9 +10,9 @@ public class PinCodeValidation
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Enter the PIN Code: ");
-		String pincode = scan.next();
+		String pincode = scan.nextLine();
 		
-		Pattern pattern = Pattern.compile("^[0-9][0-9]{4}[0-9]$");
+		Pattern pattern = Pattern.compile("^[0-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$|^[0-9]{1}[0-9]{4}[0-9]{1}$");
 		Matcher match = pattern.matcher(pincode);
 		
 		if(match.matches())
